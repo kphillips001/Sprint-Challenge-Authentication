@@ -13,7 +13,7 @@ describe('all tests', function() {
       it('POST /auth/register - should return status 201', function() {
         return request(server)
          .post('/api/auth/register')
-          .send({ username: "Andrew", password: "newtest123" })
+          .send({ username: "Kevin", password: "newtest123" })
            .then(res => {
             expect(res.status).toBe(201);
                     })
@@ -22,14 +22,14 @@ describe('all tests', function() {
         it(' POST /auth/register - res.type should match json', function() {
          return request(server)
           .post('/api/auth/register')
-           .send({ username: "Andrew", password: "newtest123" })
+           .send({ username: "Kevin", password: "newtest123" })
            .then(res => {
             expect(res.type).toMatch(/json/i);
             })
             })
             //test3
         it('POST /auth/login - should return status 200', function() {
-          return request(server).post('/api/auth/login').send({ username: 'Andrew', password: 'newtest123' }).then(res => {
+          return request(server).post('/api/auth/login').send({ username: 'Kevin', password: 'newtest123' }).then(res => {
             expect(res.status).toBe(200);
             })
             })
@@ -37,7 +37,7 @@ describe('all tests', function() {
         it(' POST /auth/login - res.type should match json"', function() {
          return request(server)
           .post('/api/auth/login')
-           .send({ username: "Andrew", password: "newtest123" })
+           .send({ username: "Kevin", password: "newtest123" })
            .then(res => {
             expect(res.type).toMatch(/json/i);
             })
